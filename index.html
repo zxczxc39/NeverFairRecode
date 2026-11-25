@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeverFair Recode</title>
+  <meta name="description" content="NFRLauncher — простой лаунчер под Windows x64. Скачивает последний релиз с GitHub и обновляется сам.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#top">NeverFair Recode</a>
+    <nav class="nav-links">
+      <a href="#features">что умеет</a>
+      <a href="#install">установка</a>
+      <a href="#faq">вопросы</a>
+      <a href="#changelog">изменения</a>
+    </nav>
+    <a class="btn btn-small" data-repo-link href="https://github.com/your-username/NFRLauncher" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero container">
+    <h1>NeverFair Recode</h1>
+    <p class="lead">Простой лаунчер под Windows. Скачивает последний релиз NFRLauncher с GitHub и дальше обновляется сам — один раз поставил и забыл.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#download">Скачать ↓</a>
+      <a class="btn" data-repo-link href="https://github.com/your-username/NFRLauncher" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="version-line mono">сейчас на GitHub: <span class="accent" data-release-tag>—</span> · файл <span data-release-size>—</span></p>
+  </section>
+
+  <section id="features" class="section container">
+    <h2>Что умеет</h2>
+    <ul class="feature-list">
+      <li><strong>Обновляется сам.</strong> Проверяет релизы при запуске и потом в фоне. Вышла новая версия — скачает и поставит без вопросов.</li>
+      <li><strong>Один файл.</strong> Без установщика, зависимостей и записей в реестре. Запустил — работает. Удалил файл — удалил всё.</li>
+      <li><strong>Качает напрямую с GitHub.</strong> Никаких зеркал, файлообменников и «подождите 30 секунд».</li>
+      <li><strong>Настройки лежат рядом.</strong> Папка configs — рядом с exe. Перенёс папку — перенёс всё.</li>
+      <li><strong>Не висит в фоне.</strong> Памяти ест немного и не оставляет процессов после закрытия.</li>
+      <li><strong>Горячие клавиши.</strong> Обновить, открыть папку, перезапустить — без мыши.</li>
+    </ul>
+  </section>
+
+  <section id="install" class="section container">
+    <h2>Установка</h2>
+    <p class="req-line">Понадобится Windows 10 или 11, 64-бит. Всё остальное лаунчер везёт с собой.</p>
+    <ol class="install-steps">
+      <li>Нажми кнопку «Установить NFRLauncher Windows x64» внизу страницы — браузер заберёт последний релиз с GitHub.</li>
+      <li>Открой скачанный файл.</li>
+      <li>Windows покажет предупреждение SmartScreen — потому что у программы нет цифровой подписи. Жми «Подробнее» → «Выполнить в любом случае».</li>
+      <li>Всё. Ярлык появится в меню «Пуск».</li>
+    </ol>
+    <p class="note">Качай только отсюда или со страницы Releases репозитория. На сторонних сайтах мы файлы не выкладываем и что там лежит — не знаем.</p>
+  </section>
+
+  <section id="faq" class="section container">
+    <h2>Вопросы</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Сколько стоит?</summary>
+        <div class="faq-a"><p>Нисколько. Платных версий нет, «премиума» нет, донаты не собираем.</p></div>
+      </details>
+      <details>
+        <summary>Это вообще безопасно?</summary>
+        <div class="faq-a"><p>Файл качается напрямую с GitHub Releases — тот же релиз, что выложен в репозитории, сайт его не перепаковывает. Цифровой подписи у exe пока нет, поэтому SmartScreen и предупреждает. Для небольших бесплатных программ это почти норма.</p></div>
+      </details>
+      <details>
+        <summary>Антивирус удалил файл. Что делать?</summary>
+        <div class="faq-a"><p>Скорее всего ложное срабатывание — антивирусы так относятся ко всему без подписи. Верни файл из карантина и добавь папку лаунчера в исключения. Если же качал «с форума», а не отсюда — удали и скачай заново кнопкой внизу.</p></div>
+      </details>
+      <details>
+        <summary>Как обновиться до новой версии?</summary>
+        <div class="faq-a"><p>Никак — он обновится сам. Если хочется руками: кнопка внизу всегда качает последний релиз, он ставится поверх старой версии.</p></div>
+      </details>
+      <details>
+        <summary>А macOS или Linux будут?</summary>
+        <div class="faq-a"><p>Пока нет. Код завязан на Windows. Если что-то изменится — это сразу появится в репозитории.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="changelog" class="section container">
+    <h2>Что изменилось</h2>
+    <div class="release">
+      <div class="release-head mono">
+        <span class="accent" data-release-tag>—</span>
+        <span class="muted" data-release-date></span>
+      </div>
+      <ul class="release-notes mono" data-release-notes></ul>
+      <a class="link-muted" data-releases-link href="https://github.com/your-username/NFRLauncher/releases" target="_blank" rel="noopener">все версии и заметки к ним ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <section id="download" class="cta">
+    <div class="container cta-inner">
+      <h2>Скачать</h2>
+      <p class="cta-lead">Последний релиз NFRLauncher для Windows x64, напрямую с GitHub. Ставится за минуту, дальше обновляется сам.</p>
+      <button class="btn btn-solid btn-big" id="download-btn" type="button">Установить NFRLauncher Windows x64</button>
+      <p class="cta-note mono">Windows 10/11 · 64-бит · файл <span data-release-size>—</span></p>
+    </div>
+    <div class="container footer-bar">
+      <span class="mono muted">© <span id="year">2026</span> neverfair recode</span>
+      <span class="mono muted">страница лежит на github pages</span>
+    </div>
+  </section>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

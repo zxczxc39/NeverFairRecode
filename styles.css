@@ -1,0 +1,361 @@
+/* NeverFair Recode — тёмная тема без украшательств */
+
+:root {
+  --bg: #0c0d0e;
+  --bg-soft: #121314;
+  --text: #e6e4dd;
+  --muted: #979a9f;
+  --accent: #56d364;
+  --accent-ink: #0c0d0e;
+  --line: rgba(255, 255, 255, 0.09);
+  --sans: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.accent { color: var(--accent); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); }
+
+/* ── Навигация ─────────────────────────────────────────── */
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(12, 13, 14, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 56px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13.5px;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+/* ── Кнопки ────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  font: 600 14.5px/1.2 var(--sans);
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-small { padding: 7px 12px; font-size: 13px; }
+
+.btn-solid {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-solid:hover {
+  background: #48c558;
+  border-color: #48c558;
+}
+
+.btn:not(.btn-solid):hover { border-color: rgba(255, 255, 255, 0.28); }
+
+.btn-big {
+  padding: 16px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.btn[disabled] { opacity: 0.6; cursor: progress; }
+
+/* ── Hero ──────────────────────────────────────────────── */
+
+.hero {
+  padding-top: 80px;
+  padding-bottom: 48px;
+}
+
+.hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.lead {
+  margin: 0 0 26px;
+  max-width: 32em;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.version-line {
+  margin: 22px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── Секции ───────────────────────────────────────────── */
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.section h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ── Что умеет: простой список ─────────────────────────── */
+
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15.5px;
+  color: var(--muted);
+  max-width: 40em;
+}
+
+.feature-list li:last-child { border-bottom: none; }
+
+.feature-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Установка ─────────────────────────────────────────── */
+
+.req-line {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.install-steps {
+  margin: 0;
+  padding-left: 22px;
+  max-width: 40em;
+}
+
+.install-steps li {
+  margin-bottom: 10px;
+  font-size: 15.5px;
+}
+
+.install-steps li::marker {
+  font-family: var(--mono);
+  color: var(--accent);
+}
+
+.note {
+  max-width: 40em;
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border-left: 2px solid var(--accent);
+  background: var(--bg-soft);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ── Вопросы ───────────────────────────────────────────── */
+
+.faq-list { max-width: 640px; }
+
+details { border-bottom: 1px solid var(--line); }
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+  content: "+";
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+details[open] summary::after { content: "−"; }
+
+.faq-a {
+  padding: 0 0 16px;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 38em;
+}
+
+.faq-a p { margin: 0; }
+
+/* ── Изменения ─────────────────────────────────────────── */
+
+.release {
+  max-width: 640px;
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  background: var(--bg-soft);
+}
+
+.release-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+}
+
+.release-notes {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.release-notes:empty { display: none; }
+
+.release-notes li { margin-bottom: 5px; }
+
+.release-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.link-muted {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.link-muted:hover { color: var(--accent); }
+
+/* ── Нижний блок с кнопкой установки ───────────────────── */
+
+.cta {
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+
+.cta-inner {
+  padding-top: 64px;
+  padding-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta h2 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.cta-lead {
+  max-width: 34em;
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.cta-note {
+  margin: 16px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+
+/* ── Адаптив ───────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .hero { padding-top: 56px; padding-bottom: 32px; }
+  .section { padding-top: 32px; padding-bottom: 32px; }
+}
