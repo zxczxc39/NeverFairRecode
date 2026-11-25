@@ -7,7 +7,7 @@
 // ── НАСТРОЙКА ────────────────────────────────────────────────────────────
 // Репозиторий в формате "владелец/репозиторий" — отсюда качается релиз.
 // Пример: "neverfair-dev/NFRLauncher"
-const NFR_REPO = "your-username/NFRLauncher";
+const NFR_REPO = "zxczxc39/NeverFairRecode";
 // ─────────────────────────────────────────────────────────────────────────
 
 const API_URL = `https://api.github.com/repos/${NFR_REPO}/releases/latest`;
